@@ -12,6 +12,15 @@ h1 {
   margin-right: auto;
   width: 50%;
 }
+
+.pics
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 table{
   border: 1px solid black;
 }
@@ -112,11 +121,5 @@ tbody {
 
 }
 
-.pics
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
 
