@@ -1,6 +1,16 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+app.config.from_mapping(
+        SECRET_KEY='dev',
+        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
+    )
+
+try:
+    os.makedirs(app.instance_path)
+except OSError:
+    pass
+
 @app.route('/status') 
 def hello(): 
     return "up"
@@ -26,5 +36,5 @@ def base():
     return render_template('testBase.html')
 
 
-if __name__ == "__main__": 
-    app.run(host ='0.0.0.0', port = 8080, debug = True)
+# if __name__ == "__main__": 
+#     app.run(host ='0.0.0.0', port = 8080, debug = True)
